@@ -1,0 +1,167 @@
+:root .grid-stack-item > .ui-resizable-handle {
+  filter: none;
+}
+
+.grid-stack {
+  position: relative;
+}
+
+.grid-stack.grid-stack-rtl {
+  direction: ltr;
+}
+
+.grid-stack.grid-stack-rtl > .grid-stack-item {
+  direction: rtl;
+}
+
+.grid-stack .grid-stack-placeholder > .placeholder-content {
+  border: 1px dashed lightgray;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  width: auto;
+  z-index: 0 !important;
+  text-align: center;
+}
+
+.grid-stack > .grid-stack-item {
+  min-width: 8.3333333333%;
+  position: absolute;
+  padding: 0;
+}
+
+.grid-stack > .grid-stack-item > .grid-stack-item-content {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  width: auto;
+  z-index: 0 !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.grid-stack > .grid-stack-item > .ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.grid-stack > .grid-stack-item.ui-resizable-disabled > .ui-resizable-handle,
+.grid-stack > .grid-stack-item.ui-resizable-autohide > .ui-resizable-handle {
+  display: none;
+}
+
+.grid-stack > .grid-stack-item.ui-draggable-dragging, .grid-stack > .grid-stack-item.ui-resizable-resizing {
+  z-index: 100;
+}
+
+.grid-stack > .grid-stack-item.ui-draggable-dragging > .grid-stack-item-content,
+.grid-stack > .grid-stack-item.ui-draggable-dragging > .grid-stack-item-content, .grid-stack > .grid-stack-item.ui-resizable-resizing > .grid-stack-item-content,
+.grid-stack > .grid-stack-item.ui-resizable-resizing > .grid-stack-item-content {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+
+.grid-stack > .grid-stack-item[data-gs-width='1'], .sidenav .grid-stack-item[data-gs-width='1']  {
+  width: 25%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-x='1'], .sidenav .grid-stack-item[data-gs-x='1'] {
+  left: 25%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-min-width='1'], .sidenav .grid-stack-item[data-gs-min-width='1'] {
+  min-width: 25%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-max-width='1'], .sidenav .grid-stack-item[data-gs-max-width='1'] {
+  max-width: 25%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-width='2'], .sidenav .grid-stack-item[data-gs-width='2'] {
+  width: 50%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-x='2'], .sidenav .grid-stack-item[data-gs-x='2'] {
+  left: 50%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-min-width='2'], .sidenav .grid-stack-item[data-gs-min-width='2'] {
+  min-width: 50%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-max-width='2'], .sidenav .grid-stack-item[data-gs-max-width='2'] {
+  max-width: 50%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-width='3'], .sidenav .grid-stack-item[data-gs-width='3'] {
+  width: 75%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-x='3'], .sidenav .grid-stack-item[data-gs-x='3'] {
+  left: 75%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-min-width='3'], .sidenav .grid-stack-item[data-gs-min-width='3'] {
+  min-width: 75%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-max-width='3'], .sidenav .grid-stack-item[data-gs-max-width='3'] {
+  max-width: 75%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-width='4'], .sidenav .grid-stack-item[data-gs-width='4'] {
+  width: 100%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-min-width='4'], .sidenav .grid-stack-item[data-gs-min-width='4'] {
+  min-width: 100%;
+}
+
+.grid-stack > .grid-stack-item[data-gs-max-width='4'], .sidenav .grid-stack-item[data-gs-max-width='4'] {
+  max-width: 100%;
+}
+
+.grid-stack.grid-stack-animate,
+.grid-stack.grid-stack-animate .grid-stack-item {
+  -webkit-transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
+  -moz-transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
+  -ms-transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
+  -o-transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
+  transition: left 0.3s, top 0.3s, height 0.3s, width 0.3s;
+}
+
+.grid-stack.grid-stack-animate .grid-stack-item.ui-draggable-dragging,
+.grid-stack.grid-stack-animate .grid-stack-item.ui-resizable-resizing,
+.grid-stack.grid-stack-animate .grid-stack-item.grid-stack-placeholder {
+  -webkit-transition: left 0s, top 0s, height 0s, width 0s;
+  -moz-transition: left 0s, top 0s, height 0s, width 0s;
+  -ms-transition: left 0s, top 0s, height 0s, width 0s;
+  -o-transition: left 0s, top 0s, height 0s, width 0s;
+  transition: left 0s, top 0s, height 0s, width 0s;
+}
+
+.grid-stack.grid-stack-one-column-mode {
+  height: auto !important;
+}
+
+.grid-stack.grid-stack-one-column-mode > .grid-stack-item {
+  position: relative !important;
+  width: auto !important;
+  left: 0 !important;
+  top: auto !important;
+  margin-bottom: 20px;
+  max-width: none !important;
+}
+
+.grid-stack.grid-stack-one-column-mode > .grid-stack-item > .ui-resizable-handle {
+  display: none;
+}

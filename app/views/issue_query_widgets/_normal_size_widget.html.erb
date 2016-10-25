@@ -1,0 +1,33 @@
+<%= form_tag({}) do -%>
+<%= hidden_field_tag 'back_url', url_for(params), id: nil %>
+<h3><%= link_to("#{l(:label_query)}: #{@query.name}",
+        @query.project ?
+            project_issues_path(query_id: @query.id, project_id: @query.project) :
+            issues_path(query_id: @query.id), class: 'bigger') %>
+</h3>
+<div class="autoscroll">
+  <table class="list issues <%= sort_css_classes %>">
+    <thead>
+      <tr>
+        <% column = @query.available_columns.select { |el| el.name == @query.group_by.to_sym }.first %>
+        <%= column_header(column) unless column.blank? %>
+        <th><%= l(:label_total) %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @issue_count_by_group %>
+        <% @issue_count_by_group.each do |group_name, group_count| -%>
+          <tr class="<%= cycle('odd', 'even') %>">
+            <td><%= group_name %></td>
+            <td><%= group_count %></td>
+          </tr>
+        <% end -%>
+        <% else %>
+          <tr class="<%= cycle('odd', 'even') %>">
+            <td><%= @issues.count %></td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<% end -%>

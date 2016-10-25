@@ -1,0 +1,25 @@
+<% if @weather %>
+  <div class="city">
+    <%= @weather['city'] || @weather['name'] %>
+  </div>
+
+  <% icon = @weather['weather'].first.try(:[], "icon") %>
+
+  <% if icon %>
+    <div class="image">
+      <img src="http://openweathermap.org/img/w/<%= icon %>.png" />
+    </div>
+  <% end %>
+
+  <div class="temp">
+    <%= @weather['main']['temp'] %> °C
+  </div>
+<% else %>
+  <h3 class="warning">
+    <% if params[:city].blank? %>
+      <%= l(:weather_city_missing) %>
+    <% else %>
+      <%= l(:weather_city_invalid) %>
+    <% end %>
+  </h3>
+<% end %>

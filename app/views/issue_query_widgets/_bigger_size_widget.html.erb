@@ -1,0 +1,8 @@
+<h3><%= link_to("#{l(:label_query)}: #{@query.name}",
+        @query.project ?
+            project_issues_path(query_id: @query.id, project_id: @query.project) :
+            issues_path(query_id: @query.id), class: 'bigger') %>
+</h3>
+<%= render partial: 'issues/list', locals: { issues: @issues, query: @query } %>
+<span class="pagination"><%= pagination_links_full @issue_pages, @issue_count %></span>
+<%= context_menu issues_context_menu_path %>

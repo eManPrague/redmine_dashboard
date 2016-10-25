@@ -1,0 +1,76 @@
+<!-- New widget add panel -->
+<span class="plus-icon widget-icon small add-widget shadow"></span>
+
+<!-- Grid -->
+<div class="grid-stack dashboard-grid">
+</div>
+
+<div id="dashboard-sidebar-slide1" class="sidenav step1">
+  <div class="content">
+    <div class="sidebar-slide-header">
+      <h3><%= l(:add_new_widget) %></h3>
+      <div class="controls">
+        <span class="widget-icon cancel-icon"></span>
+      </div>
+    </div>
+    <div class="categories-list">
+    </div>
+  </div>
+</div>
+
+<div id="dashboard-sidebar-slide2" class="sidenav step2">
+  <div class="content">
+    <div class="sidebar-slide-header">
+      <h3><%= l(:choose_widget_size) %></h3>
+      <div class="controls">
+        <span class="widget-icon back-icon"></span>
+        <span class="widget-icon cancel-icon"></span>
+      </div>
+    </div>
+    <div class="widget-detail">
+
+    </div>
+  </div>
+</div>
+
+<div id="full-screen-loader">Loading&#8230;</div>
+
+<!-- Custom javascript I18n locales -->
+<script type="text/javascript" charset="utf-8">
+  I18n = <%= javascript_locales %>;
+</script>
+
+<!-- Stylesheets -->
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag 'dashboard', plugin: :redmine_dashboard %>
+  <%= stylesheet_link_tag 'gridstack', plugin: :redmine_dashboard %>
+
+  <!-- Include all registered widget stylesheets -->
+  <% include_widget_stylesheets %>
+<% end %>
+
+<!-- Include dashboard javascripts -->
+<%= javascript_include_tag 'lodash.min',          plugin: :redmine_dashboard %>
+<%= javascript_include_tag 'moment-with-locales', plugin: :redmine_dashboard %>
+<%= javascript_include_tag 'gridstack',           plugin: :redmine_dashboard %>
+<%= javascript_include_tag 'gridstack.jQueryUI',  plugin: :redmine_dashboard %>
+<%= javascript_include_tag 'widget',              plugin: :redmine_dashboard %>
+<%= javascript_include_tag 'widget_manager',      plugin: :redmine_dashboard %>
+<%= javascript_include_tag 'dashboard',           plugin: :redmine_dashboard %>
+
+
+<% content_for :header_tags do -%>
+  <%= stylesheet_link_tag "context_menu" -%>
+  <%= javascript_include_tag 'context_menu' %>
+<% end -%>
+
+<!-- Include all registered widget javascripts -->
+<% include_widget_javascripts %>
+
+<script type="text/javascript">
+  moment.locale('<%= I18n.locale %>');
+  var widgetManager = new WidgetManager(<%= widget_manager_settings %>);
+</script>
+
+<!-- Register available widgets -->
+<%= register_widgets %>

@@ -1,0 +1,33 @@
+cs:
+  dashboard_title: 'Dashboard'
+
+  # Tools
+  add_new_widget: 'Přidat nový widget'
+  choose_widget_size: 'Vyberte velikost widgetu'
+
+  # Widget sizes
+  widget_size_normal: 'Normální'
+
+  # Widget translations
+  widget_clock: 'Hodiny'
+  widget_weather: 'Počasí'
+  widget_categories_general: 'Obecné'
+  widget_issue_query: 'Dotazy nad úkoly'
+  widget_categories_issues: 'Úkoly'
+  title_edit_widget: 'Editace widget'
+  label_widget_name: 'Název widgetu'
+  widget_my_issues: 'Mé úkoly'
+  widget_watched_issues: 'Sledované úkoly'
+  widget_reported_issues: 'Nahlášené úkoly'
+  widget_timelog: 'Strávený čas'
+  widget_news: 'Novinky'
+
+  # Weather
+  weather_city_invalid: Chybné město
+  weather_city_missing: Prosím zadejte město
+  widget_weather_options_city: Město
+
+  javascript:
+    widget_settings:
+      label: 'Nastavení widgetu'
+      name: 'Jméno'

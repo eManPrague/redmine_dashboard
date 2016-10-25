@@ -1,0 +1,592 @@
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.43);
+  -moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.43);
+  box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.43);
+}
+
+#context-menu .folder {
+  display: none;
+}
+
+/* Widgets styles */
+.widget {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.widget .title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #bbb;
+  padding: 11px 12px;
+  cursor: move;
+}
+
+.widget .title-bar .widget-icon {
+  opacity: 0;
+}
+
+.widget .title-bar:hover .widget-icon {
+  opacity: 1;
+}
+
+.widget .title-bar .name {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #808080;
+}
+
+.widget .content {
+    flex: 1;
+    padding: 20px 12px;
+    text-align: center;
+    overflow: scroll;
+}
+
+.widget .content a.bigger {
+    font-size: 20px;
+}
+
+.widget .footer {
+  border-top: 1px solid #bbb;
+  color: gray;
+  font-size: 12px;
+  text-align: right;
+  min-height: 23px;
+}
+
+.grid-stack-item.ui-draggable-dragging {
+  width: 240px;
+}
+
+.ui-resizable-handle {
+  visibility: hidden;
+}
+
+/** Generate SIDEBAR WIDGET preview */
+.sidenav .grid-stack-item {
+  position: relative;
+}
+
+.sidenav .widget {
+  top: 10px;
+  cursor: move;
+  left: 0;
+  right: 0;
+}
+
+.sidenav .grid-stack-item .title-bar {
+  padding: 2px 10px;
+}
+
+.sidenav .grid-stack-item .modify-icons {
+  min-width: 25px;
+}
+
+.sidenav .footer {
+  display: none;
+}
+
+.sidenav .widget .name {
+  color: black;
+  font-size: 5px;
+}
+
+.sidenav .widget .small {
+  width: 10px;
+  height: 10px;
+}
+
+/** Generate SIDEBAR WIDGET preview */
+.sidenav .grid-stack-item {
+  position: relative;
+}
+
+.sidenav .widget {
+  top: 10px;
+  cursor: move;
+  left: 0;
+  right: 0;
+}
+
+.sidenav .grid-stack-item .title-bar {
+  padding: 2px 10px;
+}
+
+.sidenav .footer {
+  padding: 8px;
+}
+
+.sidenav .widget .name {
+  color: black;
+  font-size: 5px;
+}
+
+.sidenav .widget .small {
+  width: 10px;
+  height: 10px;
+}
+
+/* Edit block on Widget */
+
+.edit-block {
+  width: 180px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #35424B;
+  color: white;
+  border-radius: 5px;
+
+  display: none;
+}
+
+.edit-block .widget-icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+.edit-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.edit-block .cancel-icon:hover {
+  background: url(../images/close-circle.svg) no-repeat center;
+  background-size: contain;
+}
+
+.edit-block .ok-icon:hover {
+  background: url(../images/check.svg) no-repeat center;
+  background-size: contain;
+}
+
+.edit-block form {
+  font-size: 11px;
+}
+
+.edit-block label {
+  margin-bottom: 3px;
+}
+
+.edit-block input[type=text] {
+  width: 100%;
+  font-size: 11px;
+  padding: 2px;
+  height: 14px;
+}
+
+.edit-block input {
+  margin-top: 7px;
+}
+
+.edit-block .edit-header {
+  padding: 7px 12px;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  min-height: 32px;
+}
+
+.edit-block .edit-content {
+  padding: 5px 12px 30px 12px;
+}
+
+.edit-block .edit-content input {
+  display: block;
+}
+
+.widget > div:target {
+  display: block;
+}
+
+
+/* Icons */
+
+.plus-icon {
+  background: url(../images/arrows_plus.svg) no-repeat center;
+  position: absolute;
+}
+
+.edit-icon {
+  background: url(../images/tools.svg) no-repeat center;
+}
+
+.delete-icon {
+  background: url(../images/trash.svg) no-repeat center;
+}
+
+.drag-icon {
+  background: url(../images/drag.svg) no-repeat center;
+}
+
+.cancel-icon {
+  background: url(../images/close-circle.svg) no-repeat center;
+}
+
+.back-icon {
+  background: url(../images/angle-left-circle.svg) no-repeat center;
+}
+
+.cancel-icon {
+  background: url(../images/close-circle.svg) no-repeat center;
+}
+
+.cancel-icon:hover {
+  background: url(../images/close-circle-light.svg) no-repeat center;
+}
+
+.back-icon {
+  background: url(../images/angle-left-circle.svg) no-repeat center;
+}
+
+.back-icon:hover {
+  background: url(../images/angle-left-circle-light.svg) no-repeat center;
+}
+
+.ok-icon {
+  background: url(../images/check.svg) no-repeat center;
+}
+
+.ok-icon:hover {
+  background: url(../images/check-light.svg) no-repeat center;
+}
+
+.widget-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.widget-icon + .widget-icon {
+  margin-left: 5px;
+}
+
+.small {
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.add-widget {
+  background-color: #0084bf;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+/* Dashboard sidebar accordion */
+li.accordion {
+  cursor: pointer;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+ul.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+}
+
+ul.panel.show {
+  opacity: 1;
+  max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+
+.dashboard-grid {
+  margin: 0 60px;
+  position: relative;
+}
+
+/* Styles for Dashboard sidebar */
+
+[id^="dashboard-sidebar"] * {
+  color: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+[id^="dashboard-sidebar"] h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  /*padding: 0px 20px;*/
+}
+
+[id^="dashboard-sidebar"] ul {
+  list-style: none;
+  padding: 0px;
+}
+
+[id^="dashboard-sidebar"] li {
+  border-bottom: 1px solid white;
+}
+
+[id^="dashboard-sidebar"] li:last-child {
+  border: none;
+}
+
+[id^="dashboard-sidebar"] ul li {
+  font-size: 14px;
+  padding: 10px 0px;
+}
+
+[id^="dashboard-sidebar"] li ul {
+  padding-left: 15px;
+}
+
+/* Remove Redmine header */
+
+#header {
+  display: none;
+}
+
+#top-menu {
+  position: relative;
+  z-index: 3;
+}
+
+#main,
+#content,
+#main.nosidebar {
+  background: #f0f0f0;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #35424B; /* main color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 35px;
+}
+
+/* The navigation menu links */
+.sidenav li > a {
+  padding: 5px 0px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #fff;
+  display: block;
+}
+
+.sidenav .content {
+  padding: 20px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav li > a:hover, .offcanvas a:focus {
+  opacity: 1;
+}
+
+/*Set selects to 100% in sidenav*/
+.sidenav select {
+  width: 100%;
+  color: black;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+.sidebar-slide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-slide-header .controls {
+  display: flex;
+}
+
+.sidebar-slide-header h3 {
+  margin: 0px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Loading spinner / loader */
+.grid-stack-item.loading .loader {
+  display: block;
+}
+
+.grid-stack-item.loading .content {
+  pointer-events: none;
+}
+
+.loader {
+  background: url(../images/loader.gif);
+  display: none;
+  width: 22px;
+  height: 22px;
+  background-size: 22px;
+  margin-left: 5px;
+}
+
+/*Override Redmine defaults*/
+@media screen and (max-width: 899px) {
+  #header {
+    display: block;
+  }
+  .add-widget {
+    padding: 20px;
+  }
+  .sidenav .content {
+    margin-top: 10px;
+  }
+}
+
+/* Full screen loader */
+/* Absolute Center Spinner */
+#full-screen-loader {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+#full-screen-loader:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+#full-screen-loader:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+#full-screen-loader:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

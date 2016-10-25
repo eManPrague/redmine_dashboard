@@ -1,0 +1,9 @@
+.content .city {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.content .temp {
+  font-size: 1.0rem;
+  font-weight: bold;
+}

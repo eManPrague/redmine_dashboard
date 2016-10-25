@@ -1,0 +1,33 @@
+en:
+  dashboard_title: 'Dashboard'
+
+  # Tools
+  add_new_widget: 'Add a new widget'
+  choose_widget_size: 'Choose widget size'
+
+  # Widget sizes
+  widget_size_normal: 'Normal'
+
+  # Widget translations
+  widget_clock: 'Clock'
+  widget_weather: 'Weather'
+  widget_categories_general: 'General'
+  widget_issue_query: 'Issue Query'
+  widget_categories_issues: 'Issues'
+  title_edit_widget: 'Edit widget'
+  label_widget_name: 'Widget name'
+  widget_my_issues: 'Issues assigned to me'
+  widget_watched_issues: 'Watched issues'
+  widget_reported_issues: 'Reported issues by me'
+  widget_timelog: 'Timelog'
+  widget_news: 'News'
+
+  # Weather
+  weather_city_invalid: Invalid city
+  weather_city_missing: Please fill city
+  widget_weather_options_city: City
+
+  javascript:
+    widget_settings:
+      label: 'Widget options'
+      name: 'Name'
