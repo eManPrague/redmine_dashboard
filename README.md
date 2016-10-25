@@ -10,11 +10,6 @@ Settings allow you to change certain widget specific customizations.
 
 Positioning, settings and options are **persisted throughout page reloads** and bound to specific users.
 
-## Running application
-
-* https://peaceful-lake-57432.herokuapp.com/
-* login: `admin` password: `admin123`
-
 ## Screenshot
 
 ![Screenshot](https://cloud.githubusercontent.com/assets/1773690/19630453/c8613968-998a-11e6-8b14-a35f97514370.png)
@@ -71,7 +66,7 @@ Good example of a widget that is dynamic (calls to server to fetch updated data 
 
 The convention is to use same class names in Javascript that you use them to represent in Rails portion of the app.
 
-Your widget must be wrapped in self-executing function that accepts two arguments: 
+Your widget must be wrapped in self-executing function that accepts two arguments:
 
 1. Base widget class `Widget` (found in `assets/javascripts/widget.js`)
 2. Utility class `WidgetUtil` (same file as above)
@@ -82,7 +77,7 @@ See `IssueQueryWidget` widget for good example:
 
 ```
 var IssueQueryWidget = (function(superClass, WidgetUtil) {
-  // Inheritance 
+  // Inheritance
   WidgetUtil.extend(IssueQueryWidget, superClass);
 
   // Constructor
@@ -90,9 +85,9 @@ var IssueQueryWidget = (function(superClass, WidgetUtil) {
     // Call parent
     IssueQueryWidget.__super__.constructor.apply(this, arguments);
   };
-  
+
   // Code goes here
-    
+
 })(Widget, WidgetUtil);
 ```
 
