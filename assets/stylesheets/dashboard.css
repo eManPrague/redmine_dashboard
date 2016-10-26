@@ -12,10 +12,6 @@
   box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.43);
 }
 
-#context-menu .folder {
-  display: none;
-}
-
 /* Widgets styles */
 .widget {
   display: flex;

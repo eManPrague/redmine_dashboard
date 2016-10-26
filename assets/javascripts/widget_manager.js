@@ -67,6 +67,9 @@
     // Saving data
     this.savingData = false;
 
+    // Bind context menu redirects
+    this.bindContextMenus();
+
     // Start refreshing available widgets
     this.watchInterval = setInterval(function() {
       this.watchReload()
@@ -77,6 +80,34 @@
       // Not neccessary just user data, but project data too.
       this.loadData();
     }
+  };
+
+  WidgetManager.prototype.bindContextMenus = function() {
+    // Remove default click rails actions
+    $('body').off('click.rails', '#context-menu a');
+
+    // Bind context menu redirects
+    $('body').on('click', '#context-menu a', function(evt) {
+      var $a = $(this);
+
+      if ($a.data('remote')) {
+        // Call default rails operations for remote links
+        return;
+      }
+
+      // Don't call
+      evt.preventDefault();
+
+      // Call ajax manually
+      $.ajax({
+        method: $a.data('method') || 'GET',
+        url: $a.attr('href'),
+        sucess: function(data, status, xhr) {
+          // Test for redirects
+          debugger;
+        }
+      });
+    });
   };
 
   /**

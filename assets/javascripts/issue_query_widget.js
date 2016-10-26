@@ -30,6 +30,7 @@ var IssueQueryWidget = (function(superClass, WidgetUtil) {
       this.options.page = page_from_href;
       this.render();
     }.bind(this));
+
     // Bind sorting headers
     $(this.$container[0]).find('.list thead th > a').click(function(e) {
       e.preventDefault();
@@ -41,6 +42,7 @@ var IssueQueryWidget = (function(superClass, WidgetUtil) {
       this.render();
     }.bind(this));
   };
+
 
   return IssueQueryWidget;
 })(Widget, WidgetUtil);
