@@ -33,6 +33,11 @@ class IssueQueryWidgetsController < ApplicationController
     end
   end
 
+  def refresh_widget
+    flash.clear
+    render json: { refresh: true }
+  end
+
   private
 
   def template_by_size(size)

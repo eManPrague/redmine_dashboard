@@ -15,3 +15,4 @@ controller :general_widgets do
 end
 
 post '/issue_query_widget' => 'issue_query_widgets#render_widget'
+get '/issue_query_widget'  => 'issue_query_widgets#refresh_widget'

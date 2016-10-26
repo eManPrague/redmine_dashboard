@@ -7,15 +7,15 @@ class GeneralWidgetsController < ApplicationController
   include MyHelper
 
   def my_issues
-    render partial: 'my/blocks/issuesassignedtome'
+    render text: render_to_string(partial: 'my_issues')
   end
 
   def watched_issues
-    render partial: 'my/blocks/issueswatched'
+    render text: render_to_string(partial: 'issues_watched')
   end
 
   def reported_issues
-    render partial: 'my/blocks/issuesreportedbyme'
+    render text: render_to_string(partial: 'issues_reported')
   end
 
   def timelog
