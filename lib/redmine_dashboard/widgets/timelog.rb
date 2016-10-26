@@ -9,7 +9,10 @@ module RedmineDashboard
       category :general
 
       # Define 2x1 tile
-      size :normal, width: 2, height: 2, description: "My spent time for the last 7 days"
+      size :normal, width: 2, height: 2
+
+      # Define timeout value for autoRefresh
+      timeout 20 * 60 # = 20 minutes
 
       # Url
       url controller: 'general_widgets', action: 'timelog'

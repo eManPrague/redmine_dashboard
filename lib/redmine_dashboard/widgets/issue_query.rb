@@ -9,13 +9,16 @@ module RedmineDashboard
       category :issues
 
       # Define 1x1 tile
-      size :small,  width: 1, height: 1, description: "Link to selected custom query"
+      size :small,  width: 1, height: 1
       # Define 2x3 tile
-      size :normal, width: 2, height: 2, description: "Table with total count of issues"
+      size :normal, width: 2, height: 2
       # Define 3x3 tile
-      size :bigger, width: 3, height: 3, description: "List of issues"
+      size :bigger, width: 3, height: 3
 
       url controller: 'issue_query_widgets', action: 'render_widget'
+
+      # Define timeout value for autoRefresh
+      timeout 20 * 60 # = 20 minutes
 
       # Values - all available queries
       values -> do

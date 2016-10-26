@@ -9,38 +9,54 @@ en:
   widget_size_normal: 'Normal'
 
   # Widget translations
-  widget_clock: 'Clock'
-  widget_weather: 'Weather'
   widget_categories_general: 'General'
-  widget_issue_query: 'Issue Query'
   widget_categories_issues: 'Issues'
   title_edit_widget: 'Edit widget'
   label_widget_name: 'Widget name'
-  widget_my_issues: 'Issues assigned to me'
-  widget_watched_issues: 'Watched issues'
-  widget_reported_issues: 'Reported issues by me'
+  # Widget Clock
+  widget_clock: 'Clock'
+  widget_clock_small: 'Current time'
+  widget_clock_small_description: 'Simple small analog clock yml'
+  widget_clock_normal: 'Current time'
+  widget_clock_normal_description: 'Simple analog clock'
+  # Widget Timelog
   widget_timelog: 'Timelog'
+  widget_timelog_normal: 'My timelog'
+  widget_timelog_normal_description: 'My spent time for the last 7 days'
+  # Widget News
   widget_news: 'News'
-
-  # Weather
+  widget_news_normal: 'News'
+  widget_news_normal_description: 'News'
+  # Widget Weather
+  widget_weather: 'Weather'
+  widget_weather_small: 'Weather forecast'
+  widget_weather_small_description: 'Dynamic weather forecast in selected city'
   weather_city_invalid: Invalid city
   weather_city_missing: Please fill city
   widget_weather_options_city: City
+  # Widget Issue Query
+  widget_issue_query: 'Issue Query'
+  widget_issue_query_small: 'Issue query link'
+  widget_issue_query_small_description: 'Link to selected custom query'
+  widget_issue_query_normal: 'Issue query total table'
+  widget_issue_query_normal_description: 'Table with total count of issues'
+  widget_issue_query_bigger: 'Issue query table'
+  widget_issue_query_bigger_description: 'List of issues'
+  # Widget My issues
+  widget_my_issues: 'Issues assigned to me'
+  widget_my_issues_normal: 'My issues'
+  widget_my_issues_normal_description: 'List of issues assigned to me'
+  # Widget Watched issues
+  widget_watched_issues: 'Watched issues'
+  widget_watched_issues_normal: 'Watched issues'
+  widget_watched_issues_normal_description: 'List of issues watched by me'
+  # Widget Reported issues
+  widget_reported_issues: 'Reported issues by me'
+  widget_reported_issues_normal: 'My reported issues'
+  widget_reported_issues_normal_description: 'List of issues reported by me'
 
   javascript:
     widget_settings:
       label: 'Widget options'
       name: 'Name'
-    widget:
-      clock_small: 'Current time'
-      clock_normal: 'Current time'
-      issue_query_small: 'Issue query link'
-      issue_query_normal: 'Issue query total table'
-      issue_query_bigger: 'Issue query table'
-      my_issues_normal: 'My issues'
-      news_normal: 'News'
-      reported_issues_normal: 'My reported issues'
-      timelog_normal: 'My timelog'
-      watched_issues_normal: 'Watched issues'
-      weather_small: 'Weather forecast'
 

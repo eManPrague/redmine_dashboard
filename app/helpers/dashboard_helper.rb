@@ -12,10 +12,11 @@ module DashboardHelper
   #
   def widget_info(klass)
     # Prepare hash with translations
+    klass_name = klass.widget_name
     data = klass.to_json.merge({
       l_name: l("widget_#{klass.widget_name}"),
       l_category: l("widget_categories_#{klass.category}"),
-      sizes: klass.sizes.values.map(&:to_json),
+      sizes: klass.sizes.values.map { |el| el.options_json(klass_name) },
       url: widget_url(klass),
       values: klass.values.respond_to?(:call) ? klass.values.call : klass.values,
       template: widget_template(klass),

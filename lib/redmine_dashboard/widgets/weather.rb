@@ -10,10 +10,13 @@ module RedmineDashboard
       category :general
 
       # Define 1x1 tile
-      size :small, width: 1, height: 1, description: "Dynamic weather forecast in selected city"
+      size :small, width: 1, height: 1
 
       # Url
       url controller: 'general_widgets', action: 'weather'
+
+      # Define timeout value for autoRefresh
+      timeout 2 * 3600 # = 2 hours
 
       # Options
       option :city

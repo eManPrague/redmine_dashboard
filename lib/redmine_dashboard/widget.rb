@@ -28,8 +28,10 @@ module RedmineDashboard
       #
       # * +Hash+ - Hash with size data.
       #
-      def to_json
-        options.merge(name: name)
+      def options_json(widget_name)
+        name_translated = I18n.t("widget_#{widget_name}_#{name}")
+        desc_translated = I18n.t("widget_#{widget_name}_#{name}_description")
+        options.merge(name: name, translation: name_translated, description: desc_translated)
       end
 
       # Forward method to options data. It provides
@@ -60,7 +62,8 @@ module RedmineDashboard
           name: widget_name,
           klass_name: "#{widget_name.to_s.classify}Widget",
           category: category,
-          sizes: sizes.values.map(&:to_json)
+          sizes: sizes.values.map(&:to_json),
+          timeout: timeout
         }
       end
 
@@ -108,7 +111,7 @@ module RedmineDashboard
       #
       # === Attributes
       #
-      # * +url+ - URL can be string (with URL), symbol (path helper) or
+      # * +val+ - URL can be string (with URL), symbol (path helper) or
       #           hash (`url_for` attributes)
       #
       # === Examples
@@ -203,6 +206,17 @@ module RedmineDashboard
       def values(val = nil)
         @values = val if val
         @values
+      end
+
+      # Define timeout value for autoRefresh
+      #
+      # === Attributes
+      #
+      # * +val+ - timeout interval in seconds
+      #
+      def timeout(val = nil)
+        @timeout = val if val
+        @timeout
       end
 
       # Register stylesheets.

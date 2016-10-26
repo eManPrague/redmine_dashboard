@@ -84,30 +84,43 @@
 
   WidgetManager.prototype.bindContextMenus = function() {
     // Remove default click rails actions
-    $('body').off('click.rails', '#context-menu a');
+    $(document).undelegate($.rails.linkClickSelector, 'click.rails');
 
     // Bind context menu redirects
-    $('body').on('click', '#context-menu a', function(evt) {
-      var $a = $(this);
+    $('body').on('click', '#context-menu a[data-method]', function(evt) {
+      var $a = $(evt.target);
 
       if ($a.data('remote')) {
         // Call default rails operations for remote links
-        return;
+        $.ajax({
+          method: $a.data('method') || 'GET',
+          url: $a.attr('href')
+        });
       }
 
       // Don't call
+      // TODO: method DELETE confirmation !!!
       evt.preventDefault();
 
       // Call ajax manually
       $.ajax({
         method: $a.data('method') || 'GET',
         url: $a.attr('href'),
-        sucess: function(data, status, xhr) {
-          // Test for redirects
-          debugger;
-        }
+        success: function(data, textStatus, request) {
+          // if redirect to dashboard or widget's data path
+          // refresh all widgets (TODO)
+          if (data.refresh) {
+            this.widgets.forEach(function(widget) {
+              widget.render();
+            });
+          }
+        }.bind(this),
+        error: function(request, textStatus, errorThrown) {
+          // 30x redirect
+        }.bind(this)
       });
-    });
+
+    }.bind(this));
   };
 
   /**
@@ -388,7 +401,7 @@
 
       var sizeName = $('<div>')
         .addClass('size-name')
-        .text(I18n.widget[widget.name + "_" + size.name] + ' - ' + size.height + 'x' + size.width);
+        .text(size.translation + ' - ' + size.height + 'x' + size.width);
 
       var description = $('<div>')
         .addClass('size-description')

@@ -52,7 +52,7 @@ function Widget(manager, container, args) {
   // continuously render widget
   this.refresh = true;
 
-  this.refreshInterval = 30;
+  this.refreshInterval = args.timeout || 30;
 
   // secs to continuously render
   this.refreshCount = this.refreshInterval;

@@ -10,8 +10,8 @@ module RedmineDashboard
       category :general
 
       # Define 1x1 tile
-      size :small, width: 1, height: 1, description: "Simple small analog clock"
-      size :normal, width: 1, height: 2, description: "Simple analog clock"
+      size :small, width: 1, height: 1
+      size :normal, width: 1, height: 2
 
       # Render
       static_template 'widgets/clock', true
