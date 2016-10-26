@@ -31,3 +31,16 @@ en:
     widget_settings:
       label: 'Widget options'
       name: 'Name'
+    widget:
+      clock_small: 'Current time'
+      clock_normal: 'Current time'
+      issue_query_small: 'Issue query link'
+      issue_query_normal: 'Issue query total table'
+      issue_query_bigger: 'Issue query table'
+      my_issues_normal: 'My issues'
+      news_normal: 'News'
+      reported_issues_normal: 'My reported issues'
+      timelog_normal: 'My timelog'
+      watched_issues_normal: 'Watched issues'
+      weather_small: 'Weather forecast'
+

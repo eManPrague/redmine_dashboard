@@ -9,7 +9,7 @@ module RedmineDashboard
       category :general
 
       # Define 2x1 tile
-      size :normal, width: 2, height: 2
+      size :normal, width: 2, height: 2, description: "My spent time for the last 7 days"
 
       # Url
       url controller: 'general_widgets', action: 'timelog'

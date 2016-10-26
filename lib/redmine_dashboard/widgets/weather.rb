@@ -10,7 +10,7 @@ module RedmineDashboard
       category :general
 
       # Define 1x1 tile
-      size :small, width: 1, height: 1
+      size :small, width: 1, height: 1, description: "Dynamic weather forecast in selected city"
 
       # Url
       url controller: 'general_widgets', action: 'weather'

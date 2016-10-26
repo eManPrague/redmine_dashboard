@@ -9,7 +9,7 @@ module RedmineDashboard
       category :general
 
       # Define 2x2 tile
-      size :normal, width: 2, height: 2
+      size :normal, width: 2, height: 2, description: "News"
 
       # Url
       url controller: 'general_widgets', action: 'news'

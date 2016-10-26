@@ -9,7 +9,7 @@ module RedmineDashboard
       category :issues
 
       # Define 2x2 tile
-      size :normal, width: 2, height: 2
+      size :normal, width: 2, height: 2, description: "Issues assigned to me"
 
       # Url
       url controller: 'general_widgets', action: 'my_issues'

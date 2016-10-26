@@ -119,6 +119,17 @@
   height: 10px;
 }
 
+.sidenav .size-description {
+  color: #bbb;
+  margin-top: 5px;
+}
+
+.sidenav .size-description::before {
+  content: "- ";
+  color: #bbb;
+  font-size: 12px;
+}
+
 /** Generate SIDEBAR WIDGET preview */
 .sidenav .grid-stack-item {
   position: relative;
@@ -137,16 +148,6 @@
 
 .sidenav .footer {
   padding: 8px;
-}
-
-.sidenav .widget .name {
-  color: black;
-  font-size: 5px;
-}
-
-.sidenav .widget .small {
-  width: 10px;
-  height: 10px;
 }
 
 /* Edit block on Widget */

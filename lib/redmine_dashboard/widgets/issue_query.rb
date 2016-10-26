@@ -9,11 +9,11 @@ module RedmineDashboard
       category :issues
 
       # Define 1x1 tile
-      size :small,  width: 1, height: 1
+      size :small,  width: 1, height: 1, description: "Link to selected custom query"
       # Define 2x3 tile
-      size :normal, width: 2, height: 2
+      size :normal, width: 2, height: 2, description: "Table with total count of issues"
       # Define 3x3 tile
-      size :bigger, width: 3, height: 3
+      size :bigger, width: 3, height: 3, description: "List of issues"
 
       url controller: 'issue_query_widgets', action: 'render_widget'
 

@@ -355,9 +355,13 @@
 
     var $sizes = _.map(widget.sizes, function (size) {
 
-      var text = $('<div>')
+      var sizeName = $('<div>')
         .addClass('size-name')
-        .text(size.name + ' - ' + size.height + 'x' + size.width);
+        .text(I18n.widget[widget.name + "_" + size.name] + ' - ' + size.height + 'x' + size.width);
+
+      var description = $('<div>')
+        .addClass('size-description')
+        .text(size.description);
 
       var preview = this.generateWidget(size.width, size.height, size.name, widget);
 
@@ -368,7 +372,7 @@
       this.bindDraggable(preview);
 
       // return <li> with content
-      return $('<li>').append(text, preview);
+      return $('<li>').append(sizeName, description, preview);
     }.bind(this));
 
     $mainUL.append($sizes);
