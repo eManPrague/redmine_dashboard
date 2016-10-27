@@ -1,4 +1,4 @@
-# Redmine Dashboard Plugin
+# Redmine Dashboard Plugin (developed during Ruby Rampage 2016)
 
 Plugin that enables dragging and dropping widgets. These widgets can be dynamic - this means being remotely and asynchronously updated.
 In this project you will find examples how to create your own custom widgets. We also provide a simple API to temporarly block refresh mechanisms (explained below), few examples are included with `state persists methods` (like pagination and sorting).
