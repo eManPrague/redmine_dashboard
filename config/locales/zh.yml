@@ -1,0 +1,62 @@
+zh:
+  dashboard_title: 'Dashboard'
+
+  # Tools
+  add_new_widget: '添加窗口部件'
+  choose_widget_size: '设置窗口部件尺寸'
+
+  # Widget sizes
+  widget_size_normal: '默认尺寸'
+
+  # Widget translations
+  widget_categories_general: 'General'
+  widget_categories_issues: 'Issues'
+  title_edit_widget: '编辑部件'
+  label_widget_name: '部件名称'
+  # Widget Clock
+  widget_clock: '时钟'
+  widget_clock_small: '当前时间'
+  widget_clock_small_description: '简单的模拟时钟'
+  widget_clock_normal: '当前时间'
+  widget_clock_normal_description: '简单的模拟时钟'
+  # Widget Timelog
+  widget_timelog: '工时日志'
+  widget_timelog_normal: '我的工时日志'
+  widget_timelog_normal_description: '过去7天，我耗费的工时记录'
+  # Widget News
+  widget_news: '新闻'
+  widget_news_normal: '新闻'
+  widget_news_normal_description: '新闻'
+  # Widget Weather
+  widget_weather: '天气'
+  widget_weather_small: '天气预报'
+  widget_weather_small_description: '显示所选城市的实时天气预报。'
+  weather_city_invalid: 城市不可用。
+  weather_city_missing: 请填写城市
+  widget_weather_options_city: 城市
+  # Widget Issue Query
+  widget_issue_query: '自定义查询'
+  widget_issue_query_small: '自定义查询链接'
+  widget_issue_query_small_description: '链接到所选的自定义查询'
+  widget_issue_query_normal: '问题统计表'
+  widget_issue_query_normal_description: '自定义查询中的问题数量统计表'
+  widget_issue_query_bigger: '自定义查询表'
+  widget_issue_query_bigger_description: '问题列表'
+  # Widget My issues
+  widget_my_issues: '指派给我的问题'
+  widget_my_issues_normal: '指派给我的问题'
+  widget_my_issues_normal_description: '指派给我的问题列表'
+  # Widget Watched issues
+  widget_watched_issues: '我关注的问题'
+  widget_watched_issues_normal: '我关注的问题'
+  widget_watched_issues_normal_description: '我的已关注问题列表'
+  # Widget Reported issues
+  widget_reported_issues: '我报告的问题'
+  widget_reported_issues_normal: '我报告的问题'
+  widget_reported_issues_normal_description: '我的已报告问题列表'
+
+  javascript:
+    widget_settings:
+      label: '部件选项'
+      name: '名称'
+
